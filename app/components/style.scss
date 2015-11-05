@@ -1,17 +1,24 @@
-@import "~react-toolbox/components/commons";
-@import "~react-toolbox/components/app_bar/config";
-@import "~react-toolbox/components/button/config";
+@import "~react-toolbox/lib/commons";
+@import "~react-toolbox/lib/app_bar/config";
+@import "~react-toolbox/lib/button/config";
 
 $title-font-size: 1.8 * $unit;
 
-.title {
-  font-size: $title-font-size;
-  font-weight: $font-weight-bold;
-}
+// You need to boost priority more than the minimum since
+// your build comes with React Toolbox's and we can't
+// ensure the order. You can either set a wrapper or target
+// React Toolbox data attributes to boost
+.appbar {
+  > .title {
+    font-size: $title-font-size;
+    font-weight: $font-weight-bold;
+    position: relative;
+  }
 
-.button {
-  position: absolute;
-  top: $appbar-height - ($button-floating-height / 2);
-  right: $button-floating-height / 2;
-  z-index: $z-index-higher;
+  > .button {
+    position: absolute;
+    top: $appbar-height - ($button-floating-height / 2);
+    right: $button-floating-height / 2;
+    z-index: $z-index-higher;
+  }
 }
