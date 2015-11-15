@@ -59,7 +59,7 @@
   },
   "scripts": {
     "start": "node ./server",
-    "build": "cross-env NODE_ENV=production UV_THREADPOOL_SIZE=100 webpack --config ./webpack.config.file",
+    "build": "cross-env NODE_ENV=production UV_THREADPOOL_SIZE=100 webpack --config ./webpack.config",
     "deploy": "gh-pages -d build"
   },
   "repository": "github:react-toolbox/react-toolbox-example"
