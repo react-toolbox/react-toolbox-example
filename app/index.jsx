@@ -1,3 +1,4 @@
+// You can also include here commons if you want with import 'react-toolbox/lib/commons';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ToolboxApp from 'react-toolbox/lib/app';
