@@ -25,12 +25,9 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /(\.js|\.jsx)$/,
-        exclude: /(node_modules)/,
+        test: /\.(js|jsx)$/,
         loader: 'babel',
-        query: {
-           presets:['es2015','react']
-        }
+        include: path.join(__dirname, 'app'),
       }, {
         test: /(\.scss|\.css)$/,
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass?sourceMap!toolbox')
