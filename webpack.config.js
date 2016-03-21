@@ -71,7 +71,7 @@ module.exports = {
     ]
   },
   toolbox: {
-    theme: path.join(srcPath, 'toolbox-theme.scss')
+    theme: path.join(srcPath, 'styles', 'theme.scss')
   },
   postcss: [autoprefixer],
   plugins
