@@ -8,7 +8,7 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './app/index.jsx'
+    './app/client.js'
   ],
   output: {
     path: path.join(__dirname, 'build'),
@@ -16,7 +16,7 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
-    extensions: ['', '.jsx', '.scss', '.js', '.json'],
+    extensions: ['', '.scss', '.css', '.js', '.json'],
     modulesDirectories: [
       'node_modules',
       path.resolve(__dirname, './node_modules')
@@ -28,19 +28,17 @@ module.exports = {
         test: /(\.js|\.jsx)$/,
         exclude: /(node_modules)/,
         loader: 'babel',
-        query: {
-           presets:['es2015','react']
-        }
+        query: { presets: ['es2015', 'stage-0', 'react'] }
       }, {
         test: /(\.scss|\.css)$/,
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass?sourceMap!toolbox')
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass')
       }
     ]
   },
-  toolbox: {
-    theme: path.join(__dirname, 'app/toolbox-theme.scss')
-  },
   postcss: [autoprefixer],
+  sassLoader: {
+    data: '@import "' + path.resolve(__dirname, 'app/theme/_config.scss') + '";'
+  },
   plugins: [
     new ExtractTextPlugin('react-toolbox.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),
