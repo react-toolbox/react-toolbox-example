@@ -37,7 +37,8 @@ module.exports = {
   },
   postcss: [autoprefixer],
   sassLoader: {
-    data: '@import "' + path.resolve(__dirname, 'app/theme/_config.scss') + '";'
+    data: '@import "theme/_config.scss";',
+    includePaths: [path.resolve(__dirname, './app')]
   },
   plugins: [
     new ExtractTextPlugin('react-toolbox.css', { allChunks: true }),
