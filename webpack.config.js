@@ -42,6 +42,12 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('bundle.css', { allChunks: true }),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.bundle.js',
+      minChunks: Infinity
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
