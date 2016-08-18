@@ -1,21 +1,23 @@
-const path = require('path');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+const config = require('./webpack.config');
+const internalIp = require('internal-ip');
 const express = require('express');
 const webpack = require('webpack');
-const internalIp = require('internal-ip');
-const config = require('./webpack.config');
+const path = require('path');
 
 const app = express();
 const compiler = webpack(config);
 
-app.use(require('webpack-dev-middleware')(compiler, {
+const middleware = webpackDevMiddleware(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath,
-  stats: {
-    colors: true
-  }
-}));
+  silent: false,
+  stats: { color: true }
+});
 
-app.use(require('webpack-hot-middleware')(compiler));
+app.use(middleware);
+app.use(webpackHotMiddleware(compiler));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './src/www/index.html'));

@@ -12,7 +12,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'build'),
-    filename: 'react-toolbox.js',
+    filename: 'bundle.js',
     publicPath: '/'
   },
   resolve: {
@@ -41,7 +41,7 @@ module.exports = {
     includePaths: [path.resolve(__dirname, './src/app')]
   },
   plugins: [
-    new ExtractTextPlugin('react-toolbox.css', { allChunks: true }),
+    new ExtractTextPlugin('bundle.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
