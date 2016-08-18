@@ -70,9 +70,9 @@
     "webpack-hot-middleware": "2.10.0"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production UV_THREADPOOL_SIZE=100 webpack --config ./webpack.config",
+    "build": "cross-env NODE_ENV=production UV_THREADPOOL_SIZE=100 webpack --config webpack.config",
     "deploy": "gh-pages -d build",
-    "start": "node ./server"
+    "start": "node server"
   },
   "license": "MIT",
   "homepage": "https://github.com/react-toolbox/react-toolbox-example#readme"
