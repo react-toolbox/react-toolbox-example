@@ -1,32 +1,38 @@
 {
   "name": "react-toolbox-example",
-  "version": "0.11.4",
   "description": "A set of complementary tools to ReactJS.",
-  "author": "React Toolbox Team (http://github.com/react-toolbox)",
+  "version": "0.11.4",
+  "author": {
+    "name": "React Toolbox Team",
+    "url": "http://github.com/react-toolbox"
+  },
   "contributors": [
     {
       "name": "Javi Jimenez Villar",
-      "url": "http://soyjavi.com/",
-      "email": "javi.jimenez.villar@gmail.com"
+      "email": "javi.jimenez.villar@gmail.com",
+      "url": "http://soyjavi.com/"
     },
     {
       "name": "Javi Velasco Arjona",
-      "url": "http://javivelasco.com/",
-      "email": "javier.velasco86@gmail.com"
+      "email": "javier.velasco86@gmail.com",
+      "url": "http://javivelasco.com/"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-toolbox/react-toolbox-example.git"
+  },
   "bugs": {
     "url": "https://github.com/react-toolbox/react-toolbox/issues",
     "email": "issues@react-toolbox.com"
   },
   "keywords": [
+    "components",
+    "material design",
     "react",
     "react-component",
-    "material design",
-    "toolbox",
-    "components"
+    "toolbox"
   ],
-  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "6.3.6",
     "babel-core": "6.9.1",
@@ -44,6 +50,7 @@
     "eslint-plugin-react": "^5.1.1",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "1.0.1",
+    "internal-ip": "~1.2.0",
     "node-sass": "3.7.0",
     "normalize.css": "^4.0.0",
     "postcss-loader": "0.9.1",
@@ -63,9 +70,10 @@
     "webpack-hot-middleware": "2.10.0"
   },
   "scripts": {
-    "start": "node ./server",
     "build": "cross-env NODE_ENV=production UV_THREADPOOL_SIZE=100 webpack --config ./webpack.config",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "start": "node ./server"
   },
-  "repository": "github:react-toolbox/react-toolbox-example"
+  "license": "MIT",
+  "homepage": "https://github.com/react-toolbox/react-toolbox-example#readme"
 }
