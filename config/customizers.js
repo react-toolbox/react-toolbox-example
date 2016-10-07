@@ -18,13 +18,13 @@ module.exports = {
     getDev: function () {
       return {
         test: /\.scss$/,
-        loader: "style!css!postcss!sass"
+        loader: "style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass"
       }
     },
     getProd: function () {
       return {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
+        loader: ExtractTextPlugin.extract('style', 'style!css?modules&-autoprefixer&importLoaders=1!postcss!sass')
       }
     }
   },
