@@ -1,13 +1,12 @@
-$purple: #800080;
-$white: #fff;
+$orange: #ffb400;
 
 .appBar {
-  background-color: $purple;
+  background-color: $palette-deep-orange-500;
 
   > svg {
     width: 3.4rem;
     height: 3.4rem;
     margin-right: 1rem;
-    fill: $white;
+    fill: $color-white;
   }
 }

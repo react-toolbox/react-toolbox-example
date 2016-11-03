@@ -8,7 +8,7 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './src/app/client.jsx'
+    './src/components/client.js'
   ],
   output: {
     path: path.join(__dirname, 'build'),
@@ -38,7 +38,7 @@ module.exports = {
   postcss: [autoprefixer],
   sassLoader: {
     data: '@import "theme/_config.scss";',
-    includePaths: [path.resolve(__dirname, './src/app')]
+    includePaths: [path.resolve(__dirname, './src/')]
   },
   plugins: [
     new ExtractTextPlugin('bundle.css', { allChunks: true }),
