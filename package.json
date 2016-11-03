@@ -1,30 +1,25 @@
 {
-  "name": "react-toolbox-example",
-  "description": "A set of complementary tools to ReactJS.",
+  "name": "splitspense-webapp",
+  "description": "A React web app that splits expense among friends",
   "version": "0.11.4",
   "author": {
-    "name": "React Toolbox Team",
-    "url": "http://github.com/react-toolbox"
+    "name": "Leanne Zhang",
+    "url": "http://github.com/leannezhang/"
   },
   "contributors": [
     {
-      "name": "Javi Jimenez Villar",
-      "email": "javi.jimenez.villar@gmail.com",
-      "url": "http://soyjavi.com/"
-    },
-    {
-      "name": "Javi Velasco Arjona",
-      "email": "javier.velasco86@gmail.com",
-      "url": "http://javivelasco.com/"
+      "name": "Leane Zhang",
+      "email": "info@leannezhang.com",
+      "url": "http://www.leannezhang.com/"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-toolbox/react-toolbox-example.git"
+    "url": "git+https://github.com/leannezhang/splitspense-webapp.git"
   },
   "bugs": {
-    "url": "https://github.com/react-toolbox/react-toolbox/issues",
-    "email": "issues@react-toolbox.com"
+    "url": "https://github.com/leannezhang/splitspense-webapp.git",
+    "email": "info@leannezhang.com"
   },
   "keywords": [
     "components",
@@ -75,5 +70,5 @@
     "start": "node server"
   },
   "license": "MIT",
-  "homepage": "https://github.com/react-toolbox/react-toolbox-example#readme"
+  "homepage": "https://github.com/leannezhang/splitspense-webapp.git#readme"
 }
