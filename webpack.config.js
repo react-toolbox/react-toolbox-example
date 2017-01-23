@@ -33,7 +33,7 @@ const settings = {
           ],
           env: {
             development: {
-              plugins: ["react-hot-loader/webpack"]
+              plugins: ["react-hot-loader/babel"]
             }
           }
         }
