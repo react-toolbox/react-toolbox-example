@@ -24,7 +24,7 @@ const settings = {
         loader: 'babel-loader',
         options: {
           presets: [
-            ["es2015", { loose: true }],
+            ["es2015", { modules: false }],
             "stage-2",
             "react"
           ],
