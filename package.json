@@ -1,7 +1,7 @@
 {
   "name": "react-toolbox-example",
   "description": "A set of complementary tools to ReactJS.",
-  "version": "0.11.4",
+  "version": "0.12.0",
   "author": {
     "name": "React Toolbox Team",
     "url": "http://github.com/react-toolbox"
@@ -13,9 +13,9 @@
       "url": "http://soyjavi.com/"
     },
     {
-      "name": "Javi Velasco Arjona",
-      "email": "javier.velasco86@gmail.com",
-      "url": "http://javivelasco.com/"
+      "name": "Oleg Stepura",
+      "email": "oleg[at]stepura.com",
+      "url": "http://oleg.stepura.com/"
     }
   ],
   "repository": {
@@ -33,46 +33,45 @@
     "react-component",
     "toolbox"
   ],
+  "engines": {
+    "node": ">=7.4.0",
+    "npm": ">=4.0.5"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-toolbox": "^2.0.0-beta.4",
+    "react-addons-css-transition-group": "^15.4.2"
+  },
   "devDependencies": {
-    "autoprefixer": "~6.4.0",
-    "babel-core": "~6.13.2",
-    "babel-eslint": "~6.0.4",
-    "babel-loader": "~6.0.1",
-    "babel-plugin-react-transform": "~2.0.2",
-    "babel-preset-es2015": "~6.1.4",
-    "babel-preset-react": "~6.1.4",
-    "babel-preset-stage-0": "~6.5.0",
-    "classnames": "~2.2.1",
-    "cross-env": "~2.0.0",
-    "css-loader": "~0.23.1",
-    "eslint": "~3.3.1",
-    "eslint-plugin-babel": "~3.2.0",
-    "eslint-plugin-react": "~6.1.2",
-    "express": "~4.13.3",
-    "extract-text-webpack-plugin": "~1.0.1",
-    "internal-ip": "~1.2.0",
-    "node-sass": "~3.8.0",
-    "normalize.css": "~4.2.0",
-    "postcss-loader": "~0.10.1",
-    "react": "~15.3.0",
-    "react-addons-css-transition-group": "~15.3.0",
-    "react-addons-update": "~15.3.0",
-    "react-dom": "~15.3.0",
-    "react-toolbox": "~1.1.2",
-    "react-transform-catch-errors": "~1.0.0",
-    "react-transform-hmr": "~1.0.1",
-    "redbox-react": "~1.3.0",
-    "sass-lint": "~1.7.0",
-    "sass-loader": "~4.0.0",
-    "style-loader": "~0.13.1",
-    "webpack": "~1.13.2",
-    "webpack-dev-middleware": "~1.6.1",
-    "webpack-hot-middleware": "~2.12.2"
+    "autoprefixer": "^6.6.1",
+    "babel-core": "^6.21.0",
+    "babel-eslint": "~7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-node-env-inline": "^6.8.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "cross-env": "^3.1.4",
+    "css-loader": "^0.26.1",
+    "eslint": "~3.14.0",
+    "eslint-plugin-babel": "~4.0.1",
+    "eslint-plugin-react": "^6.9.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-each": "^0.9.3",
+    "postcss-import": "^9.1.0",
+    "postcss-loader": "^1.2.2",
+    "postcss-mixins": "^5.4.1",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "redux-devtools-extension": "^1.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production UV_THREADPOOL_SIZE=100 webpack --config webpack.config",
-    "deploy": "gh-pages -d build",
-    "start": "node server"
+    "start": "node_modules/.bin/cross-env NODE_ENV=development node_modules/.bin/webpack-dev-server --colors --config webpack.config.js",
+    "build": "node_modules/.bin/cross-env NODE_ENV=production UV_THREADPOOL_SIZE=100 webpack --config webpack.config.js",
+    "deploy": "gh-pages -d build"
   },
   "license": "MIT",
   "homepage": "https://github.com/react-toolbox/react-toolbox-example#readme"
