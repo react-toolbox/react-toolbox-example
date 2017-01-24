@@ -1,3 +1,5 @@
+@import "react-toolbox/lib/button/theme.css";
+
 .button {
-  background-color: green !important;
+  background-color: var(--palette-green-700) !important;
 }
