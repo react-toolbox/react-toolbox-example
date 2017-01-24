@@ -5,7 +5,7 @@ const settings = {
   entry: {
     bundle: [
       "react-hot-loader/patch",
-      "./src/app/client.js"
+      "./src/frontend/index.js"
     ]
   },
   output: {
