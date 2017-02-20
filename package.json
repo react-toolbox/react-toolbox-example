@@ -44,9 +44,11 @@
   },
   "dependencies": {
     "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-style-proptype": "^2.0.0",
     "react-toolbox": "^2.0.0-beta.5",
-    "react-addons-css-transition-group": "^15.4.2"
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
